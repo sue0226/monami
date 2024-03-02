@@ -2,42 +2,17 @@
 const langEl = document.querySelector('.lang');
 
 langEl.addEventListener('click', function () {
-  
-  if (!langEl.classList.contains('on')) {
-      // on 클래스추가
-    langEl.classList.add('on');
-  } else {
-    //  on 이 이미 존재하면 삭제
-    langEl.classList.remove('on');
-  }
+  langEl.classList.toggle('on');
 });
 
 
-// header bottom : 전체메뉴 버튼 제어
+// header bottom : 전체메뉴 제어
 const btnAllEl = document.querySelector('.btn-all');
-
-btnAllEl.addEventListener('click', function () {
-  
-  if (!btnAllEl.classList.contains('open-menu')) {
-      btnAllEl.classList.add('open-menu');
-  } else {
-    btnAllEl.classList.remove('open-menu');
-  }
-});
-
-
-// header bottom : 전체메뉴 표시 제어
 const allMenuEl = document.querySelector('.header-bottom__allmenu');
 
-document.querySelector('.btn-all').addEventListener('click', function () {
-  
-  if (!allMenuEl.classList.contains('on')) {
-      // on 클래스추가
-      allMenuEl.classList.add('on');
-  } else {
-    //  on 이 이미 존재하면 삭제
-    allMenuEl.classList.remove('on');
-  }
+btnAllEl.addEventListener('click', function () {
+  btnAllEl.classList.toggle('open-menu');
+  allMenuEl.classList.toggle('on');
 });
 
 
@@ -79,13 +54,6 @@ document.querySelector('.btn-all').addEventListener('click', function () {
 const famSitesListEl = document.querySelector('.fam-sites__list');
 
 document.querySelector('.fam-sites a').addEventListener('click', function () {
-  
-  if (!famSitesListEl.classList.contains('on')) {
-      // on 클래스추가
-      famSitesListEl.classList.add('on');
-  } else {
-    //  on 이 이미 존재하면 삭제
-    famSitesListEl.classList.remove('on');
-  }
+  famSitesListEl.classList.toggle('on');
 });
 
